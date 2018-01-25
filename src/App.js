@@ -40,7 +40,9 @@ class App extends Component {
           ) : (
             <Authentication />
           )}
-          <GithubBadge>View Code on Github</GithubBadge>
+          <a href="https://github.com/petermiles/DevICT-Firebase">
+            <GithubBadge>View Code on Github</GithubBadge>
+          </a>
           {userid && <SignOut />}
         </PageContainer>
       );
