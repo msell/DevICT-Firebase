@@ -24,14 +24,13 @@ export default class CreateTask extends Component {
 	createTask() {
 		const { uid } = this.props;
 		const { name, dueDate } = this.state;
-		let indivTaskRef = firestore
+		let newTaskRef = firestore
 			.collection('users')
 			.doc(uid)
 			.collection('Tasks')
 			.doc();
-
-		indivTaskRef.set({ name, dueDate, id: indivTaskRef.id }).then(() => {
-			this.setState({ createTask: false, name: '', dueDate: '' });
+		newTaskRef.set({ name, dueDate, id: newTaskRef.id }).then(() => {
+			this.setState({ createActive: false, name: '', dueDate: '' });
 		});
 	}
 

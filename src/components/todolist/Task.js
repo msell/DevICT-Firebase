@@ -18,16 +18,8 @@ export default class Task extends Component {
 			.collection('users')
 			.doc(this.props.uid)
 			.collection('Tasks')
-			.where('id', '==', this.props.task.id)
-			.get()
-			.then(querySnapshot => {
-				const batch = firestore.batch();
-
-				querySnapshot.forEach(doc => {
-					batch.delete(doc.ref);
-				});
-				return batch.commit();
-			});
+			.doc(this.props.task.id)
+			.delete();
 	}
 
 	render() {
