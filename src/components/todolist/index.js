@@ -14,11 +14,7 @@ export default class TodoList extends Component {
 			loading: true,
 			tasks: [],
 		};
-
-		this.handleTaskChange = this.handleTaskChange.bind(this);
 	}
-
-	handleTaskChange() {}
 
 	componentDidMount() {
 		// Used for a once pull, will have to refresh page to see updates

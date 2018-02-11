@@ -32,11 +32,7 @@ export default class Login extends Component {
 					.firestore()
 					.collection(userid)
 					.doc(userid)
-					.set({
-						name: 'Los Angeles',
-						state: 'CA',
-						country: 'USA',
-					});
+					.add();
 			})
 			.catch(console.log);
 	}
