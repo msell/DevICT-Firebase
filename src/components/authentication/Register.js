@@ -40,8 +40,6 @@ export default class Register extends Component {
 				this.setState({ error: error.message });
 			});
 	}
-
-	componentDidMount() {}
 	render() {
 		return (
 			<TabContent>
