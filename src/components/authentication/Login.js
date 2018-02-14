@@ -37,7 +37,6 @@ export default class Login extends Component {
 			.catch(console.log);
 	}
 
-	componentDidMount() {}
 	render() {
 		return (
 			<TabContent>
