@@ -17,6 +17,7 @@ export default class Profile extends Component {
 	closeModal() {
 		this.setState({ editPic: false });
 	}
+
 	componentDidMount() {
 		firestore
 			.collection('users')
